@@ -4,7 +4,7 @@
     <p>${{ producto.precio }}</p>
     <p>Stock: {{ producto.stock }}</p>
 
-    <button :disabled="producto.stock === 0" @click="$emit('agregar', producto)">
+    <button :disabled="producto.stock === 0" @click="$emit('agregar', producto)" style=" color: darkgreen;">
       {{ producto.stock > 0 ? 'Agregar al carrito' : 'Sin stock' }}
     </button>
   </div>
