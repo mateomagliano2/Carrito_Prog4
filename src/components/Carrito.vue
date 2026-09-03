@@ -1,7 +1,6 @@
 <template>
   <div style="border: 2px dashed #666; padding: 20px; border-radius: 8px; max-width: 400px;">
     <h2>🛒 Carrito</h2>
-
     <div v-if="carrito.length === 0">
       <p>El carrito está vacío.</p>
     </div>
@@ -11,7 +10,7 @@
         <strong>{{ item.nombre }}</strong> (x{{ item.cantidad }}) - ${{ item.precio * item.cantidad }}
 
         <button @click="$emit('eliminar', item)" style="margin-left: 10px; color: red;">
-          [Eliminar]
+          ❌ ELIMINAR ❌
         </button>
       </li>
     </ul>

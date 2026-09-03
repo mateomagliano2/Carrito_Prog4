@@ -4,15 +4,13 @@
     <p>${{ producto.precio }}</p>
     <p>Stock: {{ producto.stock }}</p>
 
-    <!-- Deshabilitamos el botón si no hay stock -->
     <button :disabled="producto.stock === 0" @click="$emit('agregar', producto)">
       {{ producto.stock > 0 ? 'Agregar al carrito' : 'Sin stock' }}
     </button>
   </div>
 </template>
-
 <script setup>
-// Definimos las props que recibe el componente
+
 defineProps({
   producto: {
     type: Object,
@@ -20,6 +18,5 @@ defineProps({
   }
 })
 
-// Declaramos los eventos que este componente va a emitir hacia arriba
 defineEmits(['agregar'])
 </script>
